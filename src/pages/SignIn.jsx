@@ -1,10 +1,10 @@
 import { useState } from 'react';
+import bgImage from '../assets/signin-bg.png';
 import { useNavigate, Link } from 'react-router-dom';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 
-// Background image served from public/assets/
-const bgImage = '/assets/signin-bg.png';
+
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
