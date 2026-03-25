@@ -70,6 +70,8 @@
     align-items: center;
     gap: 8px;
     font-size: 0.8rem;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .nav-social {
@@ -446,6 +448,12 @@
 
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    /* Reset column overrides — they break single-column layout */
+    .services-grid > .service-card:nth-child(5):nth-last-child(2),
+    .services-grid > .service-card:nth-child(6):nth-last-child(1) {
+        grid-column: auto;
     }
 
     .cta-section {
