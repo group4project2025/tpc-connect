@@ -1,0 +1,463 @@
+/* ==============================
+   LANDING PAGE — Minimal Portfolio
+   ============================== */
+
+/* ---------- Google Font ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ---------- Page Wrapper ---------- */
+.landing-page {
+    font-family: 'Inter', sans-serif;
+    color: #1a1a1a;
+    background: #f2f0ed;
+    overflow-x: hidden;
+}
+
+/* ====== NAVIGATION ====== */
+.landing-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 48px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-brand {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #1a1a1a;
+    text-decoration: none;
+    letter-spacing: -0.5px;
+}
+
+.nav-brand-highlight {
+    font-weight: 400;
+    color: #f3723b;
+}
+
+.nav-pills {
+    display: flex;
+    gap: 8px;
+}
+
+.pill-btn {
+    padding: 6px 18px;
+    border-radius: 999px;
+    border: 1px solid #d4d0cb;
+    background: transparent;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.pill-btn:hover {
+    background: #1a1a1a;
+    color: #fff;
+    border-color: #1a1a1a;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+}
+
+.nav-social {
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav-social:hover {
+    color: #1a1a1a;
+}
+
+.nav-divider {
+    color: #bbb;
+    font-size: 0.75rem;
+}
+
+/* ====== HERO SECTION ====== */
+.hero-section {
+    text-align: center;
+    padding: 60px 24px 80px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-avatar-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 32px;
+}
+
+.hero-logo,
+.hero-logo-placeholder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 4px solid #fff;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    background: #fff;
+}
+
+.hero-logo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+}
+
+.hero-logo-placeholder svg {
+    width: 56px;
+    height: 56px;
+}
+
+.hero-name {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.wave-emoji {
+    display: inline-block;
+    animation: wave 1.8s ease-in-out infinite;
+    transform-origin: 70% 70%;
+}
+
+@keyframes wave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(14deg);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        transform: rotate(14deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.hero-heading {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+}
+
+.hero-subtext {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto 48px;
+    line-height: 1.6;
+}
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    padding: 14px 32px;
+    background: #1a1a1a;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 999px;
+    transition: all 0.3s;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.hero-cta:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* ====== BRANDS SECTION ====== */
+.brands-section {
+    border-top: 1px solid #e0dcd7;
+    border-bottom: 1px solid #e0dcd7;
+    padding: 32px 48px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.brands-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.brand-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.brand-name:hover {
+    opacity: 1;
+}
+
+/* ====== SERVICES SECTION ====== */
+.services-section {
+    text-align: center;
+    padding: 80px 24px 60px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.services-heading {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 400;
+    line-height: 1.4;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.services-heading strong {
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.services-pill {
+    display: inline-block;
+    padding: 6px 20px;
+    border-radius: 999px;
+    background: #f3723b;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 48px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+/* Center the 5th and 6th items in a 6-item, 4-column grid */
+.services-grid>.service-card:nth-child(5):nth-last-child(2) {
+    grid-column: 2;
+}
+
+.services-grid>.service-card:nth-child(6):nth-last-child(1) {
+    grid-column: 3;
+}
+
+.service-card {
+    background: #fff;
+    border: 1px solid #e8e5e0;
+    border-radius: 16px;
+    padding: 32px 20px 28px;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+    cursor: default;
+}
+
+.service-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+}
+
+.service-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    border: 1px solid #e8e5e0;
+    margin-bottom: 16px;
+    color: #555;
+}
+
+.service-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.service-desc {
+    font-size: 0.78rem;
+    line-height: 1.6;
+    color: #888;
+}
+
+/* ====== CTA SECTION ====== */
+.cta-section {
+    background: #f8f7f5;
+    border: 1px solid #e8e5e0;
+    border-radius: 24px;
+    text-align: center;
+    padding: 64px 24px;
+    max-width: 1100px;
+    margin: 40px auto 0;
+}
+
+.cta-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    border: 1px solid #e8e5e0;
+    background: #fff;
+    margin-bottom: 24px;
+    color: #555;
+}
+
+.cta-heading {
+    font-size: clamp(1.6rem, 4.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1px;
+    color: #1a1a1a;
+    margin-bottom: 0px;
+}
+
+/* ====== BIG BRAND NAME ====== */
+.big-brand-section {
+    text-align: center;
+    padding: 80px 0 40px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.big-brand-text {
+    font-size: clamp(3rem, 15vw, 18rem);
+    font-weight: 900;
+    letter-spacing: -6px;
+    line-height: 1;
+    color: #1a1a1a;
+    user-select: none;
+}
+
+.big-brand-highlight {
+    font-weight: 300;
+    background: linear-gradient(135deg, #f3723b, #f33b47);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ====== FOOTER ====== */
+.landing-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px 48px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.footer-copy {
+    font-size: 0.75rem;
+    color: #888;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 900px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .landing-nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 20px;
+    }
+
+    .nav-left {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hero-section {
+        padding: 40px 16px 60px;
+    }
+
+    .hero-heading {
+        font-size: 1.8rem;
+    }
+
+    .brands-section {
+        padding: 24px 20px;
+    }
+
+    .brands-row {
+        gap: 24px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-section {
+        margin: 24px 16px 0;
+        padding: 40px 16px;
+        border-radius: 16px;
+    }
+
+    .landing-footer {
+        flex-direction: column;
+        gap: 12px;
+        padding: 24px 20px;
+        text-align: center;
+    }
+}
